@@ -1,0 +1,74 @@
+def cima():#função para colocar em cima da tabela
+    print('Nome'.ljust(15), end=' ')
+    print('Total'.ljust(15),end=' ')
+    print('Dividida'.ljust(15),end=' ')
+    print('Cada'.ljust(15))
+def cabecalho(txt):#função pra criar o cabeçalho do menu
+    print('-'*30)
+    print(txt.center(30))
+    print('-'*30)
+
+def menu(lista):#função do menu
+    c = 1
+    for item in lista:
+        print(f'\033[33m{c}\033[m - \033[34m{item}\033[m')
+        c += 1
+    print('-'*30)
+    op=int(input('Sua opção é: '))
+    return op
+def conta(numero,txt):#função pra receber os valores e colocar eles em um dicionario
+    total=0
+    contas=dict()#dicionario
+    contas.clear()#apagando o dicionario caso tenha algo escrito
+    contas['nome'] = str(input("Nome da conta: "))
+    contas['valor'] = float(input(f"Valor da conta de {contas['nome']}: "))
+    dividir = str(input("Essa conta será dividida? [S/N]: "))
+    total+=contas['valor']
+    if dividir in "SsSimsim":
+        contas['Divida']='Sim'
+        div=int(input("Quantas pessoas pagarão esta conta? "))
+        contas['novovalor'] = contas['valor'] / div
+        return contas
+    elif dividir in "NnNãonãoNaonao":
+        contas['Dividas']='Não'
+        return contas
+
+
+#função principal
+fixas=list()#uma lista para todas as contas fixas
+flex=list()#uma lista para todas as contas flexiveis
+while True:
+    cabecalho('Opção de Conta')
+    contas=['Contas fixas(Condominio, Net,...)','Conta Flexivivel(Gás, luz,..)']
+    op=menu(contas)
+    if op==1:
+        a=conta(op,'Fixa')#separando e colocando as contas fixas em uma lista
+        fixas.append(a)
+    elif op==2:#e as flexiveis em outras
+        b=conta(op,'Flexivel')
+        flex.append(b)
+    print('-'*30)
+    sair=str(input('Deseja sair: '))
+    if sair in 'sSsimSimSIM':
+        print('-'*30)
+        print('Até mais'.center(30))
+        print('-'*30)
+        break
+#printando na tela as contas
+print('CONTAS FLEXIVEIS')
+cima()
+for k,v in enumerate(flex):
+    print(f'{k:>3}',end=' ')
+    for d in v.values():
+        print(f'{str(d):<15}',end='')
+    print()
+print('-='*30)
+print()
+print('CONTAS FIXAS')
+cima()
+for k,v in enumerate(fixas):
+    print(f'{k:>3}',end=' ')
+    for d in v.values():
+        print(f'{str(d):<15}',end='')
+    print()
+print('-='*30)
