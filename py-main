@@ -13,8 +13,8 @@ while not fim:
     if opção1 == 1:
         nome=input("Qual é o nome desse termômetro? ")
         unid=input("Qual letra acompanhará a unidade de medida? ")
-        pv=float(input("Ponto de vapor do {}: ".format(nome)))
-        pg=float(input("Ponto de gelo do {}: ".format(nome)))
+        pv=float(input("Ponto de vapor da água mostrado no {}ômetro: ".format(nome)))
+        pg=float(input("Ponto de gelo da água mostrado no {}ômetro:: ".format(nome)))
         print('''
         [1] CONVERTENDO PARA CELSIUS 
         [2] CONVERTENDO PARA KELVIN
