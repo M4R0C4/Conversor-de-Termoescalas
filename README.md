@@ -7,8 +7,9 @@ Este é um projeto simples que permite a conversão de temperaturas entre difere
    
 `git clone https://github.com/M4R0C4/Conversor-de-Termoescalas.git`
 
-3. Rode o arquivo 
-py-main.py 
+2. Rode o arquivo 
+
+`py-main.py`  
 
 ## Contribuições
 
