@@ -4,7 +4,7 @@ Este é um projeto simples que permite a conversão de temperaturas entre difere
 
 ## Como Usar:
 1. Clone o repositório 
-git clone https://github.com/M4R0C4/Conversor-de-Termoescalas.git
+`git clone https://github.com/M4R0C4/Conversor-de-Termoescalas.git`
 
 2. Rode o arquivo 
 py-main.py 
