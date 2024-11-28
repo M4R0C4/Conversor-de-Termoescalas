@@ -3,10 +3,11 @@
 Este é um projeto simples que permite a conversão de temperaturas entre diferentes escalas (Celsius, Fahrenheit e Kelvin). Ideal para estudos de programação e compreensão de operações matemáticas relacionadas às escalas de temperatura. Um diferencial é que caso esteja lidando com um aparelho com escala desconhecida, neste programa você pode dar seu nome a ela e ver seu valor numa escala correspondente conhecida. Basta informar o valor do ponto de fusão e ebulição mostrado no aparelho, além do nome e a letra que acompanharar o valor dela. 
 
 ## Como Usar:
-1. Clone o repositório 
+1. Clone o repositório
+   
 `git clone https://github.com/M4R0C4/Conversor-de-Termoescalas.git`
 
-2. Rode o arquivo 
+3. Rode o arquivo 
 py-main.py 
 
 ## Contribuições
